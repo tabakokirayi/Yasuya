@@ -1,0 +1,54 @@
+#navbarSupportedContent ul li:nth-last-child(2) {
+	margin-right: 10px;
+}
+
+#navbarSupportedContent .dropdown .dropdown-toggle {
+	padding: 0;
+}
+
+#navbarSupportedContent .dropdown .dropdown-toggle img {
+	padding: 0;
+	width: 40px;
+	border-radius: 20px;
+	radi
+}
+.container {
+	padding-top: 50px;
+}
+
+.house-publish {
+	margin-top: 10px;
+}
+
+.house-publish h5 {
+	text-align: center;
+}
+
+.house-publish .row {
+	margin-top: 15px;
+}
+
+.house-publish .col-lg-4 {
+	margin-bottom: 20px;
+}
+
+.house-publish .caption p {
+	margin-bottom: 1px;
+	font-size: 15px;
+	padding: 2px;
+	text-align: left;
+}
+
+.house-publish .caption p:last-child {
+	position: absolute;
+	right: 8%;
+	bottom: 2%;
+	/*font-size: 18px;*/
+	/*font: bold 20px 'Microsoft Yahei';*/
+	color: white;
+	background-color: black;
+}
+
+.house-publish .caption p:last-child span {
+	font: bold 20px 'Microsoft Yahei';
+}

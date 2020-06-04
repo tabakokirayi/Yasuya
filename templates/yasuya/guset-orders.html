@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>客户订单</title>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../layui/layui.js"></script>
+	<script type="text/javascript" src="../js/guest-orders.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/guest-orders.css">
+	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a href="" class="navbar-brand">&nbsp;&nbsp;Yasuya</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+    </form>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">首页<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">房源</a>
+      </li>
+<!--       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">故事</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">注册</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">登录</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+	<div class="orders-con">
+	    <ul class="orders-list text-secondary">
+	    	<li class="orders-item">
+	    		<div class="row">
+	    		<h5>订单编号</h5>
+	    		<div class="orders-btn ml-auto">
+	    		<button class="btn btn-primary">接单</button>
+	    		<button class="btn btn-danger">拒单</button>
+		    	</div>
+	    		</div>
+	    		<div class="row">
+	    		<div class="col-lg-4">
+	    		<img src="../images/home01.jpg" alt="..." class="img-thumbnail">
+		    	</div>	
+		    	<div class="col-lg-8">
+		    		<ul>
+	                    <li>创建时间：{{order.ctime}}</li>
+	                    <li>入住日期：{{order.start_date}}</li>
+	                    <li>离开日期：{{order.end_date}}</li>
+	                    <li>合计金额：￥{{(order.amount/100.0).toFixed(0)}}(共{{order.days}}晚)</li>
+	                    <li>订单状态：
+	                        <span>
+	                            {{if 0 == order.status}}
+	                                待接单
+	                            {{else if 3 == order.status}}
+	                                待评价
+	                            {{else if 4 == order.status}}
+	                                已完成
+	                            {{else if 6 == order.status}}
+	                                已拒单
+	                            {{/if}}
+	                        </span>
+	                    </li>
+	                    {{if 4 == order.status}}
+	                    <li>我的评价： {{order.comment}}</li>
+	                    {{else if 6 == order.status}}
+	                    <li>拒单原因： {{order.comment}}</li>
+	                    {{/if}}
+	                </ul>
+		    	</div>
+			    </div>
+	    	</li>
+	    	<li>
+	    		<div class="row">
+	    		<h5>订单编号</h5>
+	    		<div class="orders-btn ml-auto">
+	    		<button class="btn btn-primary cancel-order">接单</button>
+	    		<button class="btn btn-danger cancel-order">拒单</button>
+		    	</div>
+	    		</div>
+	    		<div class="row">
+	    		<div class="col-lg-4">
+	    		<img src="../images/home01.jpg" alt="..." class="img-thumbnail">
+		    	</div>	
+		    	<div class="col-lg-8">
+		    		<ul>
+	                    <li>创建时间：{{order.ctime}}</li>
+	                    <li>入住日期：{{order.start_date}}</li>
+	                    <li>离开日期：{{order.end_date}}</li>
+	                    <li>合计金额：￥{{(order.amount/100.0).toFixed(0)}}(共{{order.days}}晚)</li>
+	                    <li>订单状态：
+	                        <span>
+	                            {{if 0 == order.status}}
+	                                待接单
+	                            {{else if 3 == order.status}}
+	                                待评价
+	                            {{else if 4 == order.status}}
+	                                已完成
+	                            {{else if 6 == order.status}}
+	                                已拒单
+	                            {{/if}}
+	                        </span>
+	                    </li>
+	                    {{if 4 == order.status}}
+	                    <li>客户评价： {{order.comment}}</li>
+	                    {{else if 6 == order.status}}
+	                    <li>拒单原因： {{order.comment}}</li>
+	                    {{/if}}
+	                </ul>
+		    	</div>
+			    </div>
+	    	</li>
+	    </ul>
+	    </div>
+	</div>
+</body>
+</html>

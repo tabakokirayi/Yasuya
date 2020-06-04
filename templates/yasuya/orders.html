@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的订单</title>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../layui/layui.js"></script>
+	<script type="text/javascript" src="../js/orders.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/orders.css">
+	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a href="" class="navbar-brand">&nbsp;&nbsp;Yasuya</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+    </form>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">首页<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">房源</a>
+      </li>
+<!--       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">故事</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">注册</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">登录</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+	<div class="orders-con">
+	    <ul class="orders-list text-secondary">
+	    	<li class="orders-item">
+	    		<div class="row">
+	    		<h5>订单编号</h5>
+	    		<button class="btn btn-primary ml-auto">取消订单</button>
+	    		</div>
+	    		<div class="row">
+	    		<div class="col-lg-4">
+	    		<img src="../images/home01.jpg" alt="..." class="img-thumbnail">
+		    	</div>	
+		    	<div class="col-lg-8">
+		    		<ul>
+	                    <li>创建时间：{{order.ctime}}</li>
+	                    <li>入住日期：{{order.start_date}}</li>
+	                    <li>离开日期：{{order.end_date}}</li>
+	                    <li>合计金额：￥{{(order.amount/100.0).toFixed(0)}}(共{{order.days}}晚)</li>
+	                    <li>订单状态：
+	                        <span>
+	                            {{if 0 == order.status}}
+	                                待接单
+	                            {{else if 3 == order.status}}
+	                                待评价
+	                            {{else if 4 == order.status}}
+	                                已完成
+	                            {{else if 6 == order.status}}
+	                                已拒单
+	                            {{/if}}
+	                        </span>
+	                    </li>
+	                    {{if 4 == order.status}}
+	                    <li>我的评价： {{order.comment}}</li>
+	                    {{else if 6 == order.status}}
+	                    <li>拒单原因： {{order.comment}}</li>
+	                    {{/if}}
+	                </ul>
+		    	</div>
+			    </div>
+	    	</li>
+	    	<li>
+	    		<div class="row">
+	    		<h5>订单编号</h5>
+	    		<button class="btn btn-primary ml-auto">取消订单</button>
+	    		</div>
+	    		<div class="row">
+	    		<div class="col-lg-4">
+	    		<img src="../images/home01.jpg" alt="..." class="img-thumbnail">
+		    	</div>	
+		    	<div class="col-lg-8">
+		    		<ul>
+	                    <li>创建时间：{{order.ctime}}</li>
+	                    <li>入住日期：{{order.start_date}}</li>
+	                    <li>离开日期：{{order.end_date}}</li>
+	                    <li>合计金额：￥{{(order.amount/100.0).toFixed(0)}}(共{{order.days}}晚)</li>
+	                    <li>订单状态：
+	                        <span>
+	                            {{if 0 == order.status}}
+	                                待接单
+	                            {{else if 3 == order.status}}
+	                                待评价
+	                            {{else if 4 == order.status}}
+	                                已完成
+	                            {{else if 6 == order.status}}
+	                                已拒单
+	                            {{/if}}
+	                        </span>
+	                    </li>
+	                    {{if 4 == order.status}}
+	                    <li>我的评价： {{order.comment}}</li>
+	                    {{else if 6 == order.status}}
+	                    <li>拒单原因： {{order.comment}}</li>
+	                    {{/if}}
+	                </ul>
+		    	</div>
+			    </div>
+	    	</li>
+	    </ul>
+	    <!-- <script id="orders-list-tmpl" type="text/html"> -->
+<!-- 	        {{if orders}}
+	        {{each orders as order}}
+	        <li order-id={{order.order_id}}>
+	            <div class="order-title">
+	                <h3>订单编号：{{order.order_id}}</h3>
+	                {{ if 3 == order.status }}
+	                <div class="fr order-operate">
+	                    <button type="button" class="btn btn-success order-comment" data-toggle="modal" data-target="#comment-modal">发表评价</button>
+	                </div>
+	                {{/if}}
+	            </div>
+	            <div class="order-content">
+	                <img src="{{order.img_url}}">
+	                <div class="order-text">
+	                    <h3>{{order.title}}</h3>
+	                    <ul>
+	                        <li>创建时间：{{order.ctime}}</li>
+	                        <li>入住日期：{{order.start_date}}</li>
+	                        <li>离开日期：{{order.end_date}}</li>
+	                        <li>合计金额：￥{{(order.amount/100.0).toFixed(0)}}(共{{order.days}}晚)</li>
+	                        <li>订单状态：
+	                            <span>
+	                                {{if 0 == order.status}}
+	                                    待接单
+	                                {{else if 3 == order.status}}
+	                                    待评价
+	                                {{else if 4 == order.status}}
+	                                    已完成
+	                                {{else if 6 == order.status}}
+	                                    已拒单
+	                                {{/if}}
+	                            </span>
+	                        </li>
+	                        {{if 4 == order.status}}
+	                        <li>我的评价： {{order.comment}}</li>
+	                        {{else if 6 == order.status}}
+	                        <li>拒单原因： {{order.comment}}</li>
+	                        {{/if}}
+	                    </ul>
+	                </div>
+	            </div>
+	        </li>
+	        {{/each}}
+	        {{else}}
+	        暂时没有订单。
+	        {{/if}} -->
+	    <!-- </script> -->
+<!-- 	    <div class="modal fade" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="comment-label">
+	        <div class="modal-dialog" role="document">
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+	                    <h4 class="modal-title">发表评价</h4>
+	                </div>
+	                <div class="modal-body">
+	                    <textarea class="form-control" rows="3" id="comment" placeholder="请在此处填写评价"></textarea>
+	                </div>
+	                <div class="modal-footer">
+	                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	                    <button type="button" class="btn btn-primary modal-comment">确定</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div> -->
+	</div>
+</div>
+
+</body>
+</html>

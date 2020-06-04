@@ -1,0 +1,93 @@
+.main-content {
+	padding-top: 70px;
+}
+
+
+.main-search .layui-row {
+	margin-top: 15px;
+}
+
+.main-search .search-place .layui-input-inline {
+	margin-left: 0;
+}
+
+.main-search .search-place .layui-input-inline:first-child {
+	width: 100px;
+}
+
+.nav-tabs {
+	margin-top: 30px;
+}
+
+.nav-tabs li {
+	font-size: 20px;
+}
+
+
+.index-display {
+	margin-top: 20px;
+}
+
+.index-display .caption p {
+	font-size: 15px;
+	padding: 2px;
+}
+
+.index-display .caption p:last-child {
+	position: absolute;
+	right: 8%;
+	bottom: 8%;
+	/*font-size: 18px;*/
+	/*font: bold 20px 'Microsoft Yahei';*/
+	color: white;
+	background-color: black;
+}
+
+.index-display .caption p:last-child span {
+	font: bold 20px 'Microsoft Yahei';
+}
+
+
+
+#page {
+	position: fixed;
+	bottom: 20px;
+}
+
+#page .layui-laypage a {
+	height: 38px;
+	line-height: 38px;
+	font-size: 18px;
+}
+
+#page .layui-laypage-curr {
+	height: 38px;
+	line-height: 38px;
+	font-size: 18px;
+}
+
+#page .layui-laypage-spr {
+	height: 38px;
+	line-height: 38px;
+	font-size: 18px;
+}
+
+#page .layui-laypage select {
+	height: 32px;	
+}
+
+#page .layui-laypage select option {
+	font-style: 18px;
+}
+
+#page .layui-laypage .layui-laypage-refresh i {
+	font-size: 26px;
+}
+
+#page .layui-laypage .layui-laypage-skip {
+	font-size: 18px;
+}
+
+#page .layui-laypage .layui-laypage-limits {
+	font-size: 18px;
+}

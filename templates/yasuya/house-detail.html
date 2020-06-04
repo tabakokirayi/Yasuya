@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>房屋详情</title>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../layui/layui.js"></script>
+	<script type="text/javascript" src="../js/house-detail.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/house-detail.css">
+	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a href="" class="navbar-brand">&nbsp;&nbsp;Yasuya</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+    </form>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">首页<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">房源</a>
+      </li>
+<!--       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">故事</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">注册</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">登录</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <div class="layui-container-fluld">
+<div class="layui-carousel" id="house-img">
+  <div carousel-item>
+    <div>
+    	<a href="">
+    	<img src="../images/a7ba48a5-912e-4252-afa1-578ace173179.jpg">
+    	</a>
+    </div>
+    <div>
+    	<img src="../images/home02.jpg">
+    </div>
+    <div>
+    	<img src="../images/home03.jpg">
+    </div>
+  </div>
+</div>
+</div>
+ -->
+<div class="container">
+ <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../images/01f265d3-81e0-46cb-ace8-1cbb52ac57ca.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/052171f6-6f57-40ba-86b3-7eaac0a5eca4.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/44e27a4c-e9c8-4cf5-9e2f-8d1e53829aeb.webp" class="d-block w-100" alt="...">
+    </div>
+      <div class="carousel-item">
+      <img src="../images/4e0ffaa0-9045-4913-adf2-ef3bcf487072.webp" class="d-block w-100" alt="...">
+    </div>
+      <div class="carousel-item">
+      <img src="../images/de5ea966-89f6-4087-8e02-a4dad2a7eb93.webp" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+    <div class="col-lg-8">
+    	<div class="detail-con">
+    		<h2>房间名</h2>
+			
+			<div class="media lanlord-img">
+			  <img src="../images/landlord01.jpg" class="mr-3 align-self-center" alt="..." style="width: 64px">
+			  <div class="media-body text-secondary">
+			    <h5 class="mt-1">房东名字</h5>
+			    <a href="#" class="text-primary">&nbsp;联系房东</a>
+			  </div>
+			</div>			
+			
+			<div class="house-address bg-light text-secondary">
+				<h5>房屋地址</h5>
+				<span>nihao</span>
+			</div>
+
+			<div class="house-info bg-light">
+				<div class="media lanlord-img">
+					<svg class="bi bi-house-door mr-3 align-self-center text-secondary" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				  <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 00.5.5h9a.5.5 0 00.5-.5V7h1v6.5a1.5 1.5 0 01-1.5 1.5h-9A1.5 1.5 0 012 13.5zm11-11V6l-2-2V2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z" clip-rule="evenodd"/>
+				  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 011.414 0l6.647 6.646a.5.5 0 01-.708.708L8 2.207 1.354 8.854a.5.5 0 11-.708-.708L7.293 1.5z" clip-rule="evenodd"/>
+				</svg>
+				  <div class="media-body text-secondary">
+				  	<ul>
+				  		<li><h5 class="mt-2">出租2间</h5></li>
+				  		<li><span>房屋面积: 150平方米</span></li>
+				  		<li><span>房屋户型: 两室一厅</span></li>
+				  	</ul>
+				  </div>
+				</div>	
+				<div class="media lanlord-img">
+					<svg class="bi bi-house-door mr-3 align-self-center text-secondary" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				  <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 00.014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 00.022.004zm7.973.056v-.002.002zM11 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0zM6.936 9.28a5.88 5.88 0 00-1.23-.247A7.35 7.35 0 005 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 015 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 116 0 3 3 0 01-6 0zm3-2a2 2 0 100 4 2 2 0 000-4z" clip-rule="evenodd"/>
+					</svg>
+				  <div class="media-body text-secondary">
+				  	<ul>
+				  		<li><h5 class="mt-2">宜住2人</h5></li>
+				  	</ul>
+				  </div>
+				</div>	
+				<div class="media lanlord-img">
+					<svg class="bi bi-house-door mr-3 align-self-center text-secondary" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				  <path fill-rule="evenodd" d="M14 2H2a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zM2 1a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2H2z" clip-rule="evenodd"/>
+					  <path fill-rule="evenodd" d="M11 14V2h1v12h-1z" clip-rule="evenodd"/>
+					</svg>
+				  <div class="media-body text-secondary">
+				  	<ul>
+				  		<li><h5 class="mt-2">卧床配置</h5></li>
+				  		<li><span>双人床</span></li>
+				  	</ul>
+				  </div>
+				</div>
+			</div>
+
+			<div class="house-facility text-secondary bg-light">
+				<h5>设备设施</h5>
+				<ul class="house-facility-list clearfix">
+					<li><span class="wirelessnetwork-ico"></span>无线网络</li>
+                    <li><span class="{{if house.facilities.indexOf(2)>=0}}shower-ico{{else}}jinzhi-ico{{/if}}" style="float: left;"></span>热水淋浴</li>
+                    <li><span class="{{if house.facilities.indexOf(3)>=0}}aircondition-ico{{else}}jinzhi-ico{{/if}}"></span>空调</li>
+                    <li><span class="{{if house.facilities.indexOf(4)>=0}}heater-ico{{else}}jinzhi-ico{{/if}}"></span>暖气</li>
+                    <li><span class="{{if house.facilities.indexOf(5)>=0}}smoke-ico{{else}}jinzhi-ico{{/if}}"></span>允许吸烟</li>
+                    <li><span class="{{if house.facilities.indexOf(6)>=0}}drinking-ico{{else}}jinzhi-ico{{/if}}"></span>饮水设备</li>
+                    <li><span class="{{if house.facilities.indexOf(7)>=0}}brush-ico{{else}}jinzhi-ico{{/if}}"></span>牙具</li>
+                    <li><span class="{{if house.facilities.indexOf(8)>=0}}soap-ico{{else}}jinzhi-ico{{/if}}"></span>香皂</li>
+                    <li><span class="{{if house.facilities.indexOf(9)>=0}}slippers-ico{{else}}jinzhi-ico{{/if}}"></span>拖鞋</li>
+                    <li><span class="{{if house.facilities.indexOf(10)>=0}}toiletpaper-ico{{else}}jinzhi-ico{{/if}}"></span>手纸</li>
+                    <li><span class="{{if house.facilities.indexOf(11)>=0}}towel-ico{{else}}jinzhi-ico{{/if}}"></span>毛巾</li>
+                    <li><span class="{{if house.facilities.indexOf(12)>=0}}toiletries-ico{{else}}jinzhi-ico{{/if}}"></span>沐浴露、洗发露</li>
+                    <li><span class="{{if house.facilities.indexOf(13)>=0}}icebox-ico{{else}}jinzhi-ico{{/if}}"></span>冰箱</li>
+                    <li><span class="{{if house.facilities.indexOf(14)>=0}}washer-ico{{else}}jinzhi-ico{{/if}}"></span>洗衣机</li>
+                    <li><span class="{{if house.facilities.indexOf(15)>=0}}elevator-ico{{else}}jinzhi-ico{{/if}}"></span>电梯</li>
+                    <li><span class="{{if house.facilities.indexOf(16)>=0}}iscook-ico{{else}}jinzhi-ico{{/if}}"></span>允许做饭</li>
+                    <li><span class="{{if house.facilities.indexOf(17)>=0}}pet-ico{{else}}jinzhi-ico{{/if}}"></span>允许带宠物</li>
+                    <li><span class="{{if house.facilities.indexOf(18)>=0}}meet-ico{{else}}jinzhi-ico{{/if}}"></span>允许聚会</li>
+                    <li><span class="{{if house.facilities.indexOf(19)>=0}}accesssys-ico{{else}}jinzhi-ico{{/if}}"></span>门禁系统</li>
+                    <li><span class="{{if house.facilities.indexOf(20)>=0}}parkingspace-ico{{else}}jinzhi-ico{{/if}}"></span>停车位</li>
+                    <li><span class="{{if house.facilities.indexOf(21)>=0}}wirednetwork-ico{{else}}jinzhi-ico{{/if}}"></span>有线网络</li>
+                    <li><span class="{{if house.facilities.indexOf(22)>=0}}tv-ico{{else}}jinzhi-ico{{/if}}"></span>电视</li>
+                    <li><span class="{{if house.facilities.indexOf(23)>=0}}hotbathtub-ico{{else}}jinzhi-ico{{/if}}"></span>浴缸</li>
+				</ul>
+			</div>
+
+			<div class="house-comment text-secondary bg-light">
+				<h5>评价信息</h5>
+				<ul>
+					<li>
+						<p>用户名<span class="fr">时间</span></p>
+						<p>评价信息</p>
+					</li>
+					<li>
+						<p>用户名<span class="fr">时间</span></p>
+						<p>评价信息</p>
+					</li>
+					<li>
+						<p>用户名<span class="fr">时间</span></p>
+						<p>评价信息</p>
+					</li>
+				</ul>
+			</div>
+    	</div>
+	</div>
+
+	<div class="col-lg-4">
+		<div class="subscribe-con clearfix" id="pos">
+			<h5>价格:￥500/晚</h5>
+			<div class="sel-time">
+				<div class="layui-input-inline">
+				<span>日期</span>
+		        <input type="text" class="layui-input " placeholder="请选择入住时间" id="time">
+		  		</div>
+	      	</div>
+<!-- 	      	<div class="sel-people">
+		      	<p>房客</p>
+	      		<div class="layui-input-inline">
+			      <select name="people" id="people">
+			        <option value="">1人</option>
+			        <option value="浙江" selected="">1人</option>
+			        <option value="你的工号">江西省</option>
+			        <option value="你最喜欢的老师">福建省</option>
+			      </select>
+			    </div>
+	      	</div> -->
+	      	<div class="subcribe-btn">
+	      		<button type="button" class="btn btn-primary">预订</button>
+	      	</div>
+			
+			<div class="subcribe-law">
+				
+			</div>
+		</div>
+		<div class="subscribe-con-pos"></div>
+	</div>
+	
+	<div class="house-recommend text-secondary">
+		<h5>房屋推荐</h5>
+		<div class="row">
+	  	<div class="col-sm-6 col-md-4 col-lg-4">
+	      <a href="/house-detail/">
+	      <img src="../images/home01.jpg" class="img-thumbnail" alt="...">
+	  	  </a>
+	      <div class="caption border-bottom border-right border-left">
+	        <h3>Thumbnail label</h3>
+	        <p>番禺区 番禺市桥</p>
+	        <p>地址: </p>
+	        <p>出租间</p>
+	        <p>入住次数</p>
+	        <p>￥<span>500</span>/晚</p>
+	      </div>
+	  </div>
+	  <div class="col-sm-6 col-md-4 col-lg-4">
+	      <img src="../images/home02.jpg" class="img-thumbnail" alt="...">
+	      <div class="caption border-bottom border-right border-left">
+	        <h3>Thumbnail label</h3>
+	        <p>...</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+	      </div>
+	  </div>
+	  <div class="col-sm-6 col-md-4 col-lg-4">
+	      <img src="../images/home03.jpg" class="img-thumbnail" alt="...">
+	      <div class="caption clearfix border-bottom border-right border-left">
+	        <h3>Thumbnail label</h3>
+	        <p>...</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+	      </div>
+	  </div>
+
+	</div>
+	</div>
+
+</div>
+
+</div>
+
+
+
+</body>
+</html>

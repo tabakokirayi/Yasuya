@@ -1,0 +1,160 @@
+#navbarSupportedContent ul li:nth-last-child(2) {
+	margin-right: 10px;
+}
+
+#navbarSupportedContent .dropdown .dropdown-toggle {
+	padding: 0;
+}
+
+#navbarSupportedContent .dropdown .dropdown-toggle img {
+	padding: 0;
+	width: 40px;
+	border-radius: 20px;
+}
+
+.index-image {
+	padding-top: 50px;
+}
+
+
+.index-image .jumbotron {
+	padding: 0;
+	margin-bottom: 0;
+}
+
+
+/*.index-search {
+	margin-top: 10px;
+}
+
+.index-search .col-lg-6:first-child {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.index-search .col-lg-6:last-child {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+.form-date {
+	margin-left: 0px;
+}
+
+.form-date .layui-inline .layui-input-inline {
+	width: 400px;
+	margin: 0;
+}
+
+#sel_date {
+	height: 46px;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+.form-search {
+	float: left;
+}
+
+.index-search .dropdown-menu li a{
+	font-size: 18px;
+}
+
+.index-dropdown {
+	display: none;
+}
+
+.index-dropdown .media-object {
+	margin-left: 0;
+	padding: 0;
+}
+
+.index-dropdown .col-lg-6:first-child {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.index-dropdown .nav-pills {
+	width: 80px;
+	padding-right: 0;
+	text-align: center;
+	font-size: 16px;
+}
+
+.index-dropdown .search-show {
+	padding-left: 10px;
+}
+
+.index-dropdown .search-show li{
+	float: left;
+	height: 42px;
+	line-height: 42px;
+}
+.index-search .col-lg-6:last-child {
+	padding-left: 0;
+	padding-right: 0;
+}*/
+
+/*#main-search {
+	margin-top: 50px;
+}*/
+
+.main-search .layui-row {
+	margin-top: 50px;
+}
+
+.main-search .search-place .layui-input-inline {
+	margin-left: 20px;
+}
+
+.main-search .search-place .layui-input-inline:first-child {
+	width: 100px;
+}
+
+
+.card {
+	margin-top: 30px;
+}
+
+.card-header .nav-tabs {
+	margin-top: 30px;
+}
+
+.nav-tabs li {
+	font-size: 20px;
+}
+
+
+.house-display .col-lg-4, .story-display .col-lg-4 {
+	margin-bottom: 20px;
+}
+
+.house-display .caption p, .story-display .caption p {
+	margin-bottom: 1px;
+	font-size: 15px;
+	padding: 2px;
+	text-align: left;
+}
+
+
+
+.house-display .caption p:last-child {
+	position: absolute;
+	right: 8%;
+	bottom: 2%;
+	/*font-size: 18px;*/
+	/*font: bold 20px 'Microsoft Yahei';*/
+	color: white;
+	background-color: black;
+}
+
+.house-display .caption p:last-child span {
+	font: bold 20px 'Microsoft Yahei';
+}
+
+.story-display .caption p:last-child {
+	position: absolute;
+	right: 8%;
+	bottom: 2%;
+}

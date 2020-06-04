@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>故事列表</title>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../layui/layui.js"></script>
+	<script type="text/javascript" src="../js/story-list.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/story-list.css">
+	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluld">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target="#mymenu">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="" class="navbar-brand">
+				<span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Yasuya
+			</a>
+		</div>
+	
+		<div class="collapse navbar-collapse nav-link" id="mymenu">
+			<form class="navbar-form navbar-left">
+				<div class="form-group">
+					<div class="input-group">
+						<input type="text" name="" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-default">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+						</span>
+					</div>
+				</div>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="/index/">首页</a></li>
+				<li><a href="/house/">房源</a></li>
+				<li><a href="/story/">地区故事</a></li>
+				<li><a href="/signup/">注册</a></li>
+				<li><a href="/signin/">登录</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<div class="main-content">
+<div class="layui-container main-search">
+	<div class="layui-row">
+		<div class="layui-col-lg12 layui-col-md12 layui-col-sm12 layui-col-xs12 search-place">
+			<div class="layui-form">
+				<div class="layui-form-item">
+					<div class="layui-input-inline">
+				      <select name="quiz1">
+				        <option value="房源" selected="">房源</option>
+				        <option value="体验">体验</option>
+				        <option value="周边">周边</option>
+				      </select>
+				    </div>
+				    <div class="layui-input-inline">
+				      <select name="pro" id="pro">
+				        <option value="">请选择省</option>
+				        <option value="浙江" selected="">浙江省</option>
+				        <option value="你的工号">江西省</option>
+				        <option value="你最喜欢的老师">福建省</option>
+				      </select>
+				    </div>
+				    <div class="layui-input-inline">
+				      <select name="city" id="city">
+				        <option value="">请选择市</option>
+				        <option value="杭州">杭州</option>
+				        <option value="宁波" disabled="">宁波</option>
+				        <option value="温州">温州</option>
+				        <option value="温州">台州</option>
+				        <option value="温州">绍兴</option>
+				      </select>
+				    </div>
+				    <div class="layui-input-inline">
+				      <select name="dis" id="dis">
+				        <option value="">请选择县/区</option>
+				        <option value="西湖区">西湖区</option>
+				        <option value="余杭区">余杭区</option>
+				        <option value="拱墅区">临安市</option>
+				      </select>
+				    </div>
+
+			      	<div class="layui-input-inline">
+			        <input type="text" class="layui-input " id="sel_date" placeholder="起始日期">
+			      	</div>
+					
+					<button type="button" class="layui-btn layui-btn-normal">搜索</button>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<ul class="nav nav-tabs">
+  	<li role="presentation">
+    <a href="/house-list/">房源</a>
+	</li>
+ 	<li role="presentation" class="active">
+    <a>故事</a>
+	</li>
+	</ul>
+
+	<div class="row index-display">
+	  <div class="col-sm-6 col-md-4 col-lg-4">
+	    <div class="thumbnail">
+	      <a href="/house-detail/">
+	      <img src="../images/home01.jpg" alt="...">
+	  	  </a>
+	      <div class="caption">
+	        <h3>Thumbnail label</h3>
+	        <p>番禺区 番禺市桥</p>
+	        <p>发布者:</p>
+	        <p>发布时间:</p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-sm-6 col-md-4 col-lg-4">
+	    <div class="thumbnail">
+	      <img src="../images/home02.jpg" alt="...">
+	      <div class="caption">
+	        <h3>Thumbnail label</h3>
+	        <p>...</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-sm-6 col-md-4 col-lg-4">
+	    <div class="thumbnail">
+	      <img src="../images/home03.jpg" alt="...">
+	      <div class="caption">
+	        <h3>Thumbnail label</h3>
+	        <p>...</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+<div class="layui-container">
+	<div class="layui-row">
+	<div class=" layui-col-md-offset1">
+	<div id="page">
+	<fieldset class="layui-elem-field layui-field-title">
+	  <!-- <legend>显示完整功能</legend> -->
+	</fieldset>
+	</div>
+	</div>
+	</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.menus-con {
+	/*margin-top: 50px;*/
+	padding-top: 50px;
+}
+
+.menu-title {
+	margin-top: 20px;
+}
+
+.menu-text input:first-child {
+	padding: 10px 0;
+	width: 100%;
+}
+
+.menu-content input {
+	/*padding: 10px;*/
+	margin-right: 20px;
+}

@@ -1,0 +1,32 @@
+.container {
+	padding-top: 50px;
+}
+
+.story-publish {
+	margin-top: 10px;
+}
+
+.story-publish h5 {
+	text-align: center;
+}
+
+.story-publish .row {
+	margin-top: 15px;
+}
+
+.story-publish .col-lg-4 {
+	margin-bottom: 20px;
+}
+
+.story-publish .caption p {
+	margin-bottom: 1px;
+	font-size: 15px;
+	padding: 2px;
+	text-align: left;
+}
+
+.story-publish .caption p:last-child {
+	position: absolute;
+	right: 8%;
+	bottom: 2%;
+}
